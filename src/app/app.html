@@ -1,1 +1,16 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu type="overlay" [content]="mycontent">
+  <ion-header>
+  	<ion-toolbar>
+  	  <ion-title>menu</ion-title>
+  	</ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+    	<button *ngFor ="let p of pages" ion-item (tap)="openPage(p)">
+    		{{p.title}}
+    	</button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-nav #mycontent [root]="rootPage"></ion-nav>

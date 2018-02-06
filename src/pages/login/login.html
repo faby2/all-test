@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>listes </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+	<ion-list>
+	  <ion-item>
+	    <ion-label>Username</ion-label>
+	    <ion-input type="text" [(ngModel)]="username" ></ion-input>
+	  </ion-item>
+
+	  <ion-item>
+	    <ion-label>Password</ion-label>
+	    <ion-input type="password" [(ngModel)]="password" ></ion-input>
+	  </ion-item>
+	<!-- <button ion-button (tap)="singIn()">Sing in</button> -->
+	  <button ion-button (tap)="newUser()">save</button>
+	</ion-list>
+	<ion-list>
+	  <ion-item *ngFor="let item of arrData; let i= index ">
+	  	<button item-end (tap)="delete(i)">suppr</button>
+	  	<p *ngFor="let item2 of item ;">
+	  		{{item2}}
+	  	</p>
+	  </ion-item>
+	</ion-list>
+</ion-content>
