@@ -16,6 +16,8 @@ import { AngularFireAuthProvider } from 'angularfire2/auth' ;
 import { AuthentificationPage } from '../pages/authentification/authentification';
 
 
+import { NgxStripeModule } from 'ngx-stripe';
+
 var config = {
     apiKey: "AIzaSyDDjPuhCttI0EgQ22RyKysfPEYD5YqtoLc",
     authDomain: "myfistproject-86601.firebaseapp.com",
@@ -39,7 +41,8 @@ var config = {
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireDatabaseModule,
-    AngularFireModule.initializeApp(config)
+    AngularFireModule.initializeApp(config),
+    NgxStripeModule.forRoot('pk_test_ymJmF756QPBJwiTuR0iPel7k')
   ],
   bootstrap: [IonicApp],
   entryComponents: [
