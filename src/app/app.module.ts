@@ -15,6 +15,9 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthProvider } from 'angularfire2/auth' ;
 import { AuthentificationPage } from '../pages/authentification/authentification';
 
+import { HttpModule } from '@angular/http';
+
+
 
 import { NgxStripeModule } from 'ngx-stripe';
 
@@ -42,7 +45,8 @@ var config = {
     IonicModule.forRoot(MyApp),
     AngularFireDatabaseModule,
     AngularFireModule.initializeApp(config),
-    NgxStripeModule.forRoot('pk_test_ymJmF756QPBJwiTuR0iPel7k')
+    NgxStripeModule.forRoot('pk_test_ymJmF756QPBJwiTuR0iPel7k'),
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

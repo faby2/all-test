@@ -11,6 +11,7 @@
   <form novalidate (ngSubmit)="buy($event)" [formGroup] = "stripeTest">
   	<ion-input type="text" formControlName="name" placeholder="jane Doe"></ion-input>
   	<div id="card-element" class="field" #card></div>
+    <p>{{error}}</p>
   	<button ion-button type="submit">BUY</button>
   </form>
 </ion-content>
